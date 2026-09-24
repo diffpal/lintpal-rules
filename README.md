@@ -20,6 +20,8 @@ lintpal rule import github:diffpal/lintpal-rules//go@v1.0.0 --prefix upstream
 
 Imported rules are copied into `.lintpal/rules/`. Review and commit them with the project. LintPal resolves the tag to a commit during import; lint runs use the committed local copies.
 
+The catalog requires LintPal 0.4.0 or newer. LintPal 0.3.x used the earlier pack format and cannot import these rule directories.
+
 ## Catalog
 
 ### General
@@ -43,6 +45,12 @@ Install LintPal 0.4.0 or newer, then run:
 ```
 
 The script imports each catalog independently, validates the combined catalog, and confirms malformed rule metadata is rejected.
+
+## Ecosystem
+
+- [LintPal CLI](https://github.com/diffpal/lintpal)
+- [LintPal GitHub Action](https://github.com/diffpal/lintpal-action)
+- [LintPal demo](https://github.com/diffpal/lintpal-demo)
 
 ## License
 
