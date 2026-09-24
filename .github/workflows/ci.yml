@@ -13,10 +13,11 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - uses: actions/setup-node@v4
+      - uses: actions/setup-go@v6
         with:
-          node-version: 22
+          go-version: 1.26.6
+          cache: false
       - name: Install LintPal
-        run: npm install --global lintpal@0.4.0
+        run: go install github.com/diffpal/lintpal/cmd/lintpal@v0.4.0
       - name: Validate catalog
         run: ./scripts/validate.sh
